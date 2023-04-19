@@ -1,4 +1,4 @@
-package helper;
+package devtools.helper;
 
 public class YamlDecoder {
 

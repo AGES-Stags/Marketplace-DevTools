@@ -1,12 +1,11 @@
-package inject;
+package devtools.inject;
 
-import java.io.IOException;
 import java.lang.reflect.*;
-
-import helper.FileManager;
+import devtools.helper.FileManager;
 
 public class Mockup {
 
+	public static void main(String args[]){}
 	private static FileManager fileManager;
 
 	public static void sout() {
