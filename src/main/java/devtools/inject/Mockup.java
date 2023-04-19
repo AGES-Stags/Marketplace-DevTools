@@ -5,7 +5,6 @@ import devtools.helper.FileManager;
 
 public class Mockup {
 
-	public static void main(String args[]){}
 	private static FileManager fileManager;
 
 	public static void sout() {
