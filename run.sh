@@ -14,19 +14,21 @@ rm -rf result
 # rm DevTools.jar
 
 # echo $sourcePath
-javac $sourcePath -d bin
+javac -Xlint:unchecked $sourcePath -d bin 
 
 if [ $? -eq 0 ]; then
 	classPath="$(find "bin" -type f -name "*.class")"
 	classPath="${classPath//[$'\t\r\n']/' '}"
 	classPath="${classPath//'bin/'/' '}"
+	classPath="$classPath resources/"
  
 	cd ./bin
-		jar cfmv ../$package ../META-INF/MANIFEST.MF $classPath
+		cp -R ../src/main/resources .
+		jar cfm ../$package ../META-INF/MANIFEST.MF $classPath
 	cd ..
 
 	if [ $? -eq 0 ]; then
-		echo ""; jar tf $package
+		# echo ""; jar tf $package
 
 		rm -rf ../$libDir/ ; mkdir ../$libDir/
 		mv $package ../$libDir/$package

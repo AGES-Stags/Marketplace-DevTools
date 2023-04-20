@@ -1,4 +1,5 @@
 Manifest-Version: 1.0
 Main-Class: devtools.Library
 Created-By: 19 (Oracle Corporation)
+Class-Path: Run script automate class path and resources assemble
 Built-By: HCley
